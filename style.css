@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 50px;
+}
+
+html, body{
+    height: 100%;
+    background-color: navy;
+}
+
+
+
+.container{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+
+.galochka.pressed{
+    background-image: linear-gradient(to top, rgb(123, 255, 0) 50%, transparent 50%);
+    background-size: 100% 200%;
+    transition: background-position 0.9s ease-in-out;
+    background-position: bottom;
+    border-color: rgb(123, 255, 0);
+}
+
+.galochka.declined{
+    background-image: linear-gradient(to top, rgb(223, 18, 18) 50%, transparent 50%);
+    background-size: 100% 200%;
+    transition: background-position 0.9s ease-in-out;
+    background-position: bottom;
+    border-color: rgb(223, 18, 18);
+    animation-name: shakeX;
+    animation-duration: 0.5s;
+}
+
+.galochka.declined i{
+    color: rgb(0, 0, 0);
+}
+.galochka i{
+    transition: 0.3s;
+}
+.galochka.pressed i{
+    color: rgb(rgb(55, 112, 17));
+}
+
+.galochka {
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.currency{
+    animation-name: animate__backInRight;
+    animation-duration: 0.3s;
+}
+
+.currency, .calc, .galochka{
+    opacity: 0.25;
+    border-radius: 40px;
+    border-width: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+    display: flex;
+}
+#amount{
+    opacity: 0.25;
+    border-radius: 40px;
+    border-width: 10px;
+    padding-left: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    gap: 20px;
+    background-color: navy;
+}
+
+.currency i{
+    transition: transform 0.3s linear;
+}
+
+.wrapper.active .currency i{
+    transform: rotate(-180deg);
+}
+
+.wrapper.active .content{
+    display: block;
+}
+
+.content{
+    opacity: 0.25;
+    display: none;
+}
+
+.search input{
+    border-radius: 40px;
+    border-width: 10px;
+    padding-left: 65px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.search i{
+    position: absolute;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+.options{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.options li{
+    background-color: #fff;
+    border-radius: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    display: flex;
+}
+
+.content .options{
+    margin-top: 20px;
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.options li:hover{
+    cursor: pointer;
+    transition: 0.5s;
+    opacity: 0.5;
+}
+
+.output{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hide{
+    display: none;
+}
+
+.output p{
+    color: #fff;
+}

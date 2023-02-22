@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <title>BTC</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container animate__animated animate__backInLeft">
+			<input type="text" spellcheck="false" id="amount" placeholder="Amount"/>
+            <button class="galochka" onclick="confirmPress()"><i class="uil uil-check"></i></button>
+		</div>
+        <div class="animate__animated animate__backInRight">
+            <button class="currency">Currency
+                <i class="uil uil-angle-down" id="arrow"></i>
+            </button>
+        </div>
+        <div class="content">
+            <div class="search">
+                <i class="uil uil-search"></i>
+                <input spellcheck="false" type="text" placeholder="Search" class="inp-curr">
+                <ul class="options"></ul>
+            </div>
+        </div>
+        <button class="calc hide animate__animated animate__heartBeat">Calculate</button>
+		<div class="output"></div>
+    </div>
+    <script src="js.js"></script>
+</body>
+</html>
