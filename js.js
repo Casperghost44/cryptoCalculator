@@ -111,6 +111,9 @@ function confirmPress(){
         confirmBtn.innerHTML = `<i class="uil uil-multiply"></i>`;
         confirmBtn.classList.add("declined");
     }
+    if((amountN != 0) && (activeCurr != "")){
+        submitBtn.classList.remove("hide");
+    }
 };
 
 function getOutput(){
